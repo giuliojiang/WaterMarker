@@ -33,19 +33,19 @@ public class Picture
         return new Color(
             (rgb >> 24) & 0xff,
             (rgb >> 16) & 0xff,
-            (rgb >> 8) & 0xff,
-            (rgb >> 0) & 0xff);
+            (rgb >>  8) & 0xff,
+            (rgb      ) & 0xff);
     }
 
     public void setPixel(int x, int y, Color rgb)
     {
 
         image.setRGB(x, y,
-            (
-                ((0xff & rgb.getRed()) << 24)   |
-                ((0xff & rgb.getGreen()) << 16) |
-                ((0xff & rgb.getBlue())  << 8)  |
-                ((0xff & rgb.getAlpha()) << 0)    
+            (  
+                ((0xff & rgb.getAlpha()) << 24)   |
+                ((0xff & rgb.getRed())   << 16)   |
+                ((0xff & rgb.getGreen()) << 8 )   |
+                ((0xff & rgb.getBlue())       ) 
             )
             )
             ;

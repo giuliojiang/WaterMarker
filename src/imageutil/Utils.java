@@ -19,7 +19,7 @@ public class Utils {
 
   public static Picture createPicture(int width, int height) {
     BufferedImage img = new BufferedImage(width, height,
-        BufferedImage.TYPE_INT_RGB);
+        BufferedImage.TYPE_INT_ARGB);
     return new Picture(img);
   }
 
@@ -60,7 +60,7 @@ public class Utils {
     // If image loaded, then create a BufferedImage which is modifiable
     int imageWidth = origImage.getWidth(null);
     int imageHeight = origImage.getHeight(null);
-    img = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_RGB);
+    img = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_ARGB);
     Graphics g = img.createGraphics();
     g.drawImage(origImage, 0, 0, null);
     return new Picture(img);

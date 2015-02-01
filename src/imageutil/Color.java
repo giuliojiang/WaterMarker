@@ -13,20 +13,20 @@ public class Color
     private int alpha;
 
 
-    public Color(int red, int green, int blue)
-    {
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
-        this.alpha = 255;
-    }
+//    public Color(int red, int green, int blue)
+//    {
+//        this.red = red;
+//        this.green = green;
+//        this.blue = blue;
+//        this.alpha = 255;
+//    }
     
-    public Color(int red, int green, int blue, int alpha)
+    public Color(int alpha, int red, int green, int blue)
     {
+        this.alpha = alpha;
         this.red = red;
         this.green = green;
         this.blue = blue;
-        this.alpha = alpha;
     }
 
 
